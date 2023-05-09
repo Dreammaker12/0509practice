@@ -1,0 +1,18 @@
+#홀수 짝수 
+number = 11
+
+if number % 2 ==0:
+    print("even")
+else:
+    print("odd")
+
+#비교
+
+num1, num2 = 10, 10
+
+if num1> num2:
+    print("first number")
+elif num1 == num2:
+    print("equal")
+else:
+    print("second number")d')
