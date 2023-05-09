@@ -1,0 +1,76 @@
+#for문을 이용해서 list 안에 넣기 
+
+scores = [100, 70, 80, 90, 50]
+grades = list()
+
+for score in scores:
+    if score > 80:
+        grades.append('A')
+    elif score > 60:
+        grades.append('B')
+    elif score > 40:
+        grades.append('C')
+    else:
+        grades.append('F')
+print(grades)
+
+#합격점수와 불합격 점수 구분해서 평균구하기 
+scores = [100, 70, 80, 90, 50]
+cutoff = 50
+
+pass_score_sum, pass_num = 0, 0 
+nopass_score_sum, no_pass_num = 0, 0
+
+for score in scores:
+    if score > cutoff:
+        pass_score_sum += score
+        pass_num += 1
+    else:
+        nopass_score_sum += score
+        no_pass_num += 1
+pass_score_mean = pass_score_sum/pass_num 
+nopass_score_mean = nopass_score_sum/no_pass_num
+
+print("mean of passed scores: ",pass_score_mean)
+print("mean of nopassed scores: ", nopass_score_mean)
+
+#짝수, 홀수 출력기(정수 판별)
+numbers = list()
+
+for num in range(30):
+    numbers.append(num)
+    
+numbers.append(3.14)
+
+for num in numbers:
+    if num % 2 == 0:
+        print("Even Number")
+    elif num % 2 != 0:
+        print("Odd Number")
+    else:
+        print("Not an Integer")
+
+#100이하 5의 배수의 합 
+multiple_of_n = 5
+
+numbers = list()
+for num in range(100):
+    numbers.append(num)
+sum_multiple_of_n = 0
+for num in numbers:
+    if num % multiple_of_n == 0:
+        sum_multiple_of_n += num
+
+print(sum_multiple_of_n)
+
+#최대, 최소 구하기 
+scores = [90, 40, 80, 20, 30]
+M, m = 0 , 100
+
+for score in scores:
+    if score > M:
+        M = score
+    if score < m:
+        m = score
+print("Max value:", M)
+print("Min value:", m)
