@@ -1,0 +1,10 @@
+seconds = 36025
+if seconds > 60:
+    minutes = seconds // 60
+    seconds -= minutes*60
+    if  minutes>60:
+        hours = minutes//60
+        minutes -= hours*60
+else:
+    minutes = 0
+print(hours, 'hour',minutes, 'min', seconds, 'second')
