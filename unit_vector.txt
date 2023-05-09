@@ -1,0 +1,43 @@
+#방법1
+
+v1 = [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10]
+
+
+square_sum = 0
+for dim_val in v1:
+    square_sum += dim_val**2
+norm = square_sum**0.5
+
+print("norm of v1 befor unit vector: ", norm)
+
+for dim_idx in range(len(v1)):
+    v1[dim_idx] /= norm
+
+square_sum = 0
+for dim_val in v1:
+    square_sum += dim_val**2
+norm = square_sum**0.5
+
+print("norm of v1 after unit vector:", norm)
+
+#방법2
+
+v1 = [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10]
+
+
+square_sum = 0
+for dim_val in v1:
+    square_sum += dim_val**2
+norm = square_sum**0.5
+
+print("norm of v1 befor unit vector: ", norm)
+
+v1_norm = list()
+for dim_val in v1:
+    v1_norm.append(dim_val/norm)
+square_sum = 0
+for dim_val in v1_norm:
+    square_sum += dim_val**2
+norm = square_sum**0.5
+
+print("norm of v1 after unit vector:", norm)
